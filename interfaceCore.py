@@ -46,6 +46,7 @@ def IF_CALL_FUNCTION(params):
             cmd = fid
 
         print '%s < %s'%(deviceId, cmd)
+        rpc.call('IF_MQTT_SEND', {'deviceId':deviceId, 'cmd':cmd})
 
         rpc.call('DB_ADD_HISTORY', {
             'deviceId': deviceId,
