@@ -53,7 +53,7 @@ def IF_CALL_FUNCTION(params):
             'payload': postParams
             })
     else:
-        return "device not found"
+        return "endpoint cannot be found"
 
 print "Started ..."
 rpc.start()
