@@ -57,4 +57,4 @@ def IF_CALL_FUNCTION(params):
         return "endpoint cannot be found"
 
 print "Started ..."
-rpc.start()
+rpc.loop()
