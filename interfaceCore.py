@@ -1,5 +1,5 @@
 import amqp_rpc as rpc
-
+import json
 
 
 @rpc.register
@@ -50,7 +50,7 @@ def IF_CALL_FUNCTION(params):
         rpc.call('DB_ADD_HISTORY', {
             'deviceId': deviceId,
             'action': "%s: %s"%(verb, path),
-            'payload': postParams
+            'payload': json.dumps(postParams)
             })
     else:
         return "endpoint cannot be found"
