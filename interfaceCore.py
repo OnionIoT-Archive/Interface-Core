@@ -52,8 +52,8 @@ def IF_CALL_FUNCTION(params):
             'action': "%s: %s"%(verb, path),
             'payload': postParams
             })
-
-    return None
+    else:
+        return "device not found"
 
 print "Started ..."
 rpc.start()
